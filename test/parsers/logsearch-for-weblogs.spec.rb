@@ -3,10 +3,10 @@ require 'logstash/filters/grok'
 
 describe 'All logsearch-for-weblogs parsers' do
   extend LogStash::RSpec
-   
+
   config <<-CONFIG
     filter {
-      #{File.read('target/logsearch-for-weblogs.filters.conf')}
+      #{File.read('target/logstash/logsearch-for-weblogs.filters.conf')}
     }
   CONFIG
 

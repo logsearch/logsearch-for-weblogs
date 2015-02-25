@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+# we're not using the latest version
+exec ./vendor/logsearch-filters-common/bin/install_deps.sh 1.4.0
+
 if [ ! -d $SCRIPT_DIR/../vendor/addon-common ]; then
   echo "Installing vendor/addon-common ..."
 
